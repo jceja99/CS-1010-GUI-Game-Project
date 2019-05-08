@@ -15,12 +15,23 @@ pageOne.grid(row=0, column=0, sticky="nsew")
 pageTwo = tkinter.Frame(root, bg="maroon")
 pageTwo.grid(row=0, column=0, sticky="nsew")
 
+#images #
+warriorimg = tkinter.PhotoImage(file="warrior.png")
+mageimg = tkinter.PhotoImage(file="mage.png")
+archerimg = tkinter.PhotoImage(file="archer.png")
+blacksmithimg = tkinter.PhotoImage(file="Blacksmith.png")
+deathimg = tkinter.PhotoImage(file="Death.png")
+deerimg = tkinter.PhotoImage(file="hunted deer.png")
+jailimg = tkinter.PhotoImage(file="jailed.png")
+ruinsimg = tkinter.PhotoImage(file="ruins.png")
+goldimg = tkinter.PhotoImage(file="Gold Victory.png")
+
 # MAGE PATH #
 pageThree = tkinter.Frame(root, bg= "blue")
 pageThree.grid(row=0, column=0, sticky="nsew")
 
 # Mage A vvv
-pageMageA = tkinter.Frame(root, bg= "blue")
+pageMageA = tkinter.Frame(root,bg= "blue")
 pageMageA.grid(row=0, column=0, sticky="nsew")
 
 pageMageA1 = tkinter.Frame(root, bg= "blue")
@@ -173,6 +184,9 @@ goToThree.grid(row=1, column=0, sticky="nsew")
 label1 = tkinter.Label(pageThree, text="You begin your day. The first thing you do...")
 label1.grid(row=0, column=0)
 
+Mageimgbutton = tkinter.Button(pageThree, image=mageimg)
+Mageimgbutton.grid(row=4, column=0)
+
 # PATH A vvv
 goToMageA = tkinter.Button(pageThree, text="Go Hunting", fg="black", command=showMageA)
 goToMageA.grid(row=1, column=0, sticky="nsew")
@@ -205,14 +219,16 @@ goToMageB2.grid(row=2, column=0, sticky="nsew")
 
 goToMageB3 = tkinter.Button(pageMageB, text="Visit the blacksmith", fg="black", command=showMageB3)
 goToMageB3.grid(row=3, column=0, sticky="nsew")
+
+
 # Path B ^^^
 
 # Path C vvv
-goToMageC = tkinter.Button(pageThree, text="Explore Ruiuns", fg="black", command=showMageC)
+goToMageC = tkinter.Button(pageThree, text="Explore Ruins", fg="black", command=showMageC)
 goToMageC.grid(row=3, column=0, sticky="nsew")
 
 
-label1 = tkinter.Label(pageMageC, text="You go straight twards the local ancient ruins in search of rare loot")
+label1 = tkinter.Label(pageMageC, text="You go straight towards the local ancient ruins in search of rare loot")
 label1.grid(row=0, column=0)
 
 goToMageC1 = tkinter.Button(pageMageC, text="Walk into the ruins", fg="black", command=showMageC1)
